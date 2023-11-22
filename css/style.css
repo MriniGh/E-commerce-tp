@@ -235,7 +235,6 @@ a:focus {
 .slider_section .slider_container {
   color: #fefefe;
   background-color: #000000;
-  background-color: #f89cab;
   padding: 25px;
   border-radius: 0 0 15px 15px;
 }
@@ -257,7 +256,7 @@ a:focus {
 }
 
 .slider_section .img-box img {
-  width: 275px;
+  width: 600px;
 }
 
 .slider_section .detail-box {
@@ -274,9 +273,9 @@ a:focus {
 .slider_section .detail-box a {
   display: inline-block;
   padding: 10px 40px;
-  background-color: #db4566;
+  background-color: black;
   color: #ffffff;
-  border: 1px solid #db4566;
+  border: 1px solid white;
   border-radius: 5px;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -400,9 +399,9 @@ a:focus {
 .shop_section .btn-box a {
   display: inline-block;
   padding: 10px 40px;
-  background-color: #f16179;
+  background-color: black;
   color: #ffffff;
-  border: 1px solid #f16179;
+  border: 1px solid white;
   border-radius: 5px;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -410,7 +409,7 @@ a:focus {
 
 .shop_section .btn-box a:hover {
   background-color: transparent;
-  color: #f16179;
+  color: black;
 }
 
 .saving_section {
@@ -854,3 +853,22 @@ a:focus {
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
+
+
+
+.add-to-cart {
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+ }
