@@ -74,8 +74,14 @@
                 Login
               </span>
             </a>
-            <a href="">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            <a href="cart.html">
+              <i class="fa fa-shopping-bag" aria-hidden="true">
+
+                <span class="number" id="number">
+                  
+                </span>
+              </i>
+
             </a>
             <form class="form-inline ">
               <button class="btn nav_search-btn" type="submit">
@@ -208,6 +214,8 @@
             <option selected>Choose...</option>
             <option value="Watch">Watch</option>
             <option value="Ring">Ring</option>
+            <option value="Flower">Flower</option>
+            <option value="Bear">Bear</option>
           </select>
         </div>
 
@@ -237,7 +245,7 @@
               </div>
               <div class="add-to-cart">
                 <a href="">
-                  <button type="button" class="btn btn-success">
+                  <button type="button" class="btn btn-success"  onclick="addToCart(this)">
                      Add to Cart
                   </button>                    </a>
           </div>
@@ -269,9 +277,10 @@
 
               <div class="add-to-cart">
                     <a href="">
-                      <button type="button" class="btn btn-success">
+                      <button type="button" class="btn btn-success" onclick="addToCart(this)">
                          Add to Cart
-                      </button>                    </a>
+                      </button>
+                    </a>
               </div>
             </a>
           </div>

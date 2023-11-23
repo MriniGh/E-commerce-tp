@@ -17,7 +17,7 @@
 <body>
     <div class="container">
         <h2>Cart</h2>
-        <table class="table">
+        <table class="table" id="cartItems">
             <thead>
                 <tr>
                     <th>Product</th>
@@ -28,8 +28,8 @@
             </thead>
             <tbody>
                 <tr>
+                    <td><img src="images/p3.png" width="100px" alt=""></td>
                     <td>Product 1</td>
-                    <td>2</td>
                     <td>$20</td>
                     <td>
                         <button type="button" class="btn btn-danger">
@@ -37,16 +37,7 @@
                         </button>
                     </td>
                 </tr>
-                <tr>
-                    <td>Product 2</td>
-                    <td>1</td>
-                    <td>$15</td>
-                    <td>
-                        <button type="button" class="btn btn-danger">
-                            <i class="fas fa-trash"></i> Remove
-                        </button>
-                    </td>
-                </tr>
+            
             </tbody>
         </table>
         <button type="button" class="btn btn-success">
@@ -54,4 +45,31 @@
         </button>
     </div>
 </body>
+
+
+<script>
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            // Get the cart items container
+        var cartItemsContainer = document.getElementById('cartItems');
+
+        // Clear existing content
+        cartItemsContainer.innerHTML = '';
+
+        // Populate the cart items
+        cartItems.forEach(function(item) {
+            var row = document.createElement('tr');
+            row.innerHTML = `
+            <td><img src="${item.img}" width="100px" ></td>
+                <td>${item.productName}</td>
+                <td>${item.price}</td>
+                <td>
+                    <button type="button" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Remove
+                    </button>
+                </td>
+            `;
+            cartItemsContainer.appendChild(row);
+        });
+  
+</script>
 </html>
